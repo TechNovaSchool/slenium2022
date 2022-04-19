@@ -9,10 +9,15 @@ public class IntroToLocators {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.get("https://www.google.com/");
 
-        driver.findElement(By.linkText("About")).click();
+        driver.findElement(By.linkText("Gmail")).click();
+        driver.findElement(By.id("value")).click();
+        driver.findElement(By.className("im-title"));
+        driver.findElement(By.tagName("h1"));
+
+
 
         String actualTitle = driver.getTitle();
         String expectedTitle = "About";

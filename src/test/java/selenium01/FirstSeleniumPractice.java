@@ -28,6 +28,8 @@ public class FirstSeleniumPractice {
         System.out.println(driver.getCurrentUrl());
 
         driver.close(); //it will close the browser
+//        cash
+         //  cache
 
 
 
