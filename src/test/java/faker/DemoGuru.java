@@ -55,12 +55,5 @@ public class DemoGuru {
         pass.sendKeys(password);
         confirmPass.sendKeys(password);
         submitBtn.click();
-
-        faker.lorem().sentence();
-
-
-
-
-
     }
 }
