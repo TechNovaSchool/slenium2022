@@ -16,5 +16,6 @@ public class FakerPractice {
         System.out.println(lastName);
         System.out.println(age);
         System.out.println(address);
+
     }
 }
