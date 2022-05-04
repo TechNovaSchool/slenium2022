@@ -3,6 +3,7 @@ package dropDown;
 import com.github.javafaker.Faker;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,6 +35,8 @@ public class SelectPractice {
 
         Select select3 = new Select(dropDown3);
         select3.selectByValue("javascript");
+
+        dropDown3.sendKeys("", Keys.BACK_SPACE);
 
 
     }
