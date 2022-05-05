@@ -56,4 +56,17 @@ public class SmartBear {
         pass.sendKeys("test");
         submitBtn.click();
     }
+
+    public static void verifyOrder (WebDriver driver, String name) {
+
+        List<WebElement> allNames = driver.findElements(By.xpath("//table[@id=\"ctl00_MainContent_orderGrid\"]/tbody/tr/td[2]"));
+
+        for(WebElement names : allNames ) {
+            if(names.getText().contains(name)) {
+                System.out.println("The exist in the list " + names.getText());
+                return;
+            }
+        }
+        System.out.println("The name doesn't exist in the list");
+    }
 }
