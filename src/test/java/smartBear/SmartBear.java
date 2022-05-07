@@ -64,9 +64,29 @@ public class SmartBear {
         for(WebElement names : allNames ) {
             if(names.getText().contains(name)) {
                 System.out.println("The exist in the list " + names.getText());
+//                break;// break stop or exist the loop
                 return;
             }
         }
         System.out.println("The name doesn't exist in the list");
+
     }
+
+    public static void printNameAndCities(WebDriver driver) {
+        List<WebElement> allNames = driver.findElements(By.xpath("//table[@id=\"ctl00_MainContent_orderGrid\"]/tbody/tr/td[2]"));
+        List<WebElement> cities = driver.findElements(By.xpath("//table[@id=\"ctl00_MainContent_orderGrid\"]/tbody/tr/td[7]"));
+
+        for(int i = 0; i < cities.size(); i++){
+            System.out.println(allNames.get(i).getText() + " lives " + cities.get(i).getText());
+        }
+
+    }
+//    Method to print name and cities
+//    Create a method named printNameAndCities that takes WebDriver object as parameter
+//    This method should simply print all the names and city in the List of All orders
+
+
+
+
+
 }

@@ -27,14 +27,15 @@ public class VerifyOrder {
 
         String date = "01/05/2010";
 
-        if(date.equals(dateOfOrderSusan)) {
-            System.out.println("Test Pass");
-        }
-        else{
-            System.out.println("Test failed");
-        }
+//        if(date.equals(dateOfOrderSusan)) {
+//            System.out.println("Test Pass");
+//        }
+//        else{
+//            System.out.println("Test failed");
+//        }
 
-        SmartBear.verifyOrder(driver, "Steve Johns");
+        SmartBear.verifyOrder(driver, "Clare222 Jefferson");
+        SmartBear.printNameAndCities(driver);
 
 
 
