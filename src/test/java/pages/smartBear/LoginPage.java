@@ -20,4 +20,7 @@ public class LoginPage {
     @FindBy (xpath = "//input[@id=\"ctl00_MainContent_login_button\"]")
     public WebElement loginBtn;
 
+    @FindBy (xpath = "//span[@id=\"ctl00_MainContent_status\"]")
+    public WebElement errorMessage;
+
 }
