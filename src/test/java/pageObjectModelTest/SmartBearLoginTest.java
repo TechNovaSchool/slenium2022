@@ -2,6 +2,7 @@ package pageObjectModelTest;
 
 import com.github.javafaker.Faker;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -54,5 +55,10 @@ public class SmartBearLoginTest {
         loginPage.username.sendKeys(Config.getProperty("login"));
         loginPage.loginBtn.click();
         Assert.assertTrue(loginPage.errorMessage.isDisplayed());
+    }
+
+    @AfterClass
+    public void tearDown() {
+        Driver.closeDriver();
     }
 }
