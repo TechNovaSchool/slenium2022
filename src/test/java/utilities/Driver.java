@@ -19,20 +19,20 @@ public class Driver {
     public static WebDriver getDriver() {
         if(driver == null) {
             switch (Config.getProperty("browser")) {
-                case "chrome" :
+                case "chrome" -> {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
-                    break;
-                case "firefox" :
+                }
+                case "firefox" -> {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
-                    break;
-                case "edge" :
+                }
+                case "edge" -> {
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
-                    break;
+                }
             }
-//            driver.manage().window().maximize();
+            driver.manage().window().fullscreen();
               driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         }
